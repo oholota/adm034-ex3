@@ -7,6 +7,19 @@ on:
       - '.github/workflows/**'
       - 'vehicles/**'
   workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Target environment'
+        type: choice
+        options:
+          - staging
+          - production
+        default: staging
+      vehicle:
+        description: 'Vehicle to highlight in the report'
+        type: string
+        default: 'all'
+
 
 concurrency:
   group: ${{ github.ref }}
