@@ -19,7 +19,10 @@ on:
         description: 'Vehicle to highlight in the report'
         type: string
         default: 'all'
-
+      reason:
+        description: 'Please specify reason for deploy'
+        type: string
+        default: 'my TL said me'
 
 concurrency:
   group: ${{ github.ref }}
